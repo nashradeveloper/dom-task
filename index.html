@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Task Manager</h1>
+
+      <div class="task-container">
+        <input type="text" id="taskInput" placeholder="What needs doing?" />
+        <select name="priority" id="prioritySelect">
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+          <option value="Notes">Notes</option>
+        </select>
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Work">Work</button>
+        <button class="filter-btn" data-filter="Personal">Personal</button>
+        <button class="filter-btn" data-filter="Notes">Notes</button>
+      </div>
+
+      <div class="our-task">
+        <div id="taskList"></div>
+      </div>
+
+      <div class="actionBtn">
+        <span id="taskCount">0 tasks</span>
+        <button id="clearCompletedBtn">Clear completed</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
